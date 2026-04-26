@@ -4,13 +4,6 @@ This project predicts whether a Spotify song is popular using audio features suc
 
 Songs with a popularity score of **70 or higher** are labeled as popular.
 
-## Project Structure
-
-- `spotify-popularity-github.ipynb` - GitHub-ready final notebook
-- `dataset.csv` - Spotify song dataset
-- `requirements.txt` - Python libraries needed to run the notebook
-- `spotify-popularity-raw-work-41-steps.ipynb` - raw step-by-step working notebook
-
 ## Workflow
 
 1. Problem statement
