@@ -1,23 +1,42 @@
 # Spotify Song Popularity Prediction
 
-This project predicts whether a Spotify song is popular using audio features such as danceability, energy, loudness, acousticness, instrumentalness, valence, tempo, and explicit content.
+This project uses Spotify audio features to predict whether a song is likely to be popular or not popular.
 
-Songs with a popularity score of **70 or higher** are labeled as popular.
+## Problem Statement
 
-## Workflow
+The goal of this project is to understand whether a song's audio features can help predict its popularity. In this project, songs with a popularity score of **70 or higher** are labeled as **popular**, while songs below 70 are labeled as **not popular**.
 
-1. Problem statement
-2. Data loading
-3. Data cleaning
-4. Exploratory data analysis
-5. Feature engineering
-6. Model building
-7. Model evaluation
-8. Handling class imbalance
-9. Probability-based predictions
-10. Hit song simulation
-11. Key insights
-12. Conclusion
+The main question is:
+
+**Can we use Spotify song features such as danceability, energy, loudness, tempo, and acousticness to predict if a song will be popular?**
+
+## Dataset
+
+The dataset contains Spotify song information, including popularity scores and audio features such as:
+
+- Danceability
+- Energy
+- Loudness
+- Speechiness
+- Acousticness
+- Instrumentalness
+- Liveness
+- Valence
+- Tempo
+- Explicit content
+
+## Methods Used
+
+The project follows a beginner-friendly machine learning process:
+
+- Data loading
+- Data cleaning
+- Exploratory data analysis
+- Feature engineering
+- Model building
+- Model evaluation
+- Probability-based prediction
+- Hit song simulation
 
 ## Models Used
 
@@ -25,23 +44,23 @@ Songs with a popularity score of **70 or higher** are labeled as popular.
 - Balanced Logistic Regression
 - Random Forest Classifier
 
+## What We Were Able To Discover
+
+- Most songs in the dataset are **not popular**, which means the dataset is imbalanced.
+- Only a smaller number of songs have a popularity score of 70 or higher.
+- Audio features can give useful signals, but they cannot perfectly explain popularity.
+- Random Forest was useful because it predicted song popularity and also showed which features were more important.
+- Probability scores gave more detail than a simple popular/not popular prediction.
+- Some generated song combinations had higher predicted popularity probabilities than others.
+- Song popularity is not only based on audio features. Artist fame, playlists, marketing, release timing, and social media trends can also affect popularity.
+
 ## Key Insights
 
-- Most songs in the dataset are not popular, so the dataset is imbalanced.
-- Probability scores are more informative than only checking the final prediction.
-- Random Forest is useful because it predicts popularity and shows feature importance.
-- Real-world popularity also depends on artist fame, playlists, marketing, social media trends, and release timing.
+- Songs with stronger energy, danceability, and loudness may have a better chance of being predicted as popular.
+- Songs with very high acousticness or instrumentalness may be less likely to be predicted as popular in this dataset.
+- Since the dataset is imbalanced, balanced models can help the model pay more attention to popular songs.
+- It is better to look at prediction probability instead of only checking the final yes/no prediction.
 
-## How To Run
+## Conclusion
 
-Install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
-
-Open and run:
-
-```text
-spotify-popularity-github.ipynb
-```
+This project shows how machine learning can be used to estimate Spotify song popularity from audio features. The model can provide helpful predictions and insights, but it should be used as a guide rather than a perfect answer because real-world music popularity depends on many factors outside the dataset.
