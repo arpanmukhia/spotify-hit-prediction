@@ -43,6 +43,7 @@ The project follows a beginner-friendly machine learning process:
 - Logistic Regression
 - Balanced Logistic Regression
 - Random Forest Classifier
+- A lightweight Random Forest model was trained separately for Streamlit deployment to reduce file size while keeping the same feature inputs and prediction logic.
 
 ## What We Were Able To Discover
 
